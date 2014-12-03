@@ -56,7 +56,7 @@
             }).run();
             var url = "https://api.instagram.com/v1/users/"+user+"/?access_token="+token+"&callback=?";
             $.getJSON(url, function(data) {
-              $(".jumbotron").append("<img class='img-circle' src='"+data.data.profile_picture+"' />");
+              $(".jumbotron").append("<img class='img-circle' style='border-radius:50%' src='"+data.data.profile_picture+"' />");
               $(".jumbotron").append("<h1>Hi! This is "+data.data.full_name+"</h1>");
               $(".jumbotron").append("<h2>"+data.data.bio+"</h2>");
               $(".jumbotron").append("<h3>These are my recent pictures</h3>");
