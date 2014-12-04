@@ -62,18 +62,9 @@
               $(".jumbotron").append("<h2>"+data.data.bio+"</h2>");
               $(".jumbotron").append("<h3>These are my recent pictures</h3>");
               $(".jumbotron").append("<h3><a href='http://instagram.com/"+data.data.username+"'>Follow me on instagram @"+data.data.username+"</a></h3>");
+              var url = encodeURIComponent(window.location.protocol);
+              $("body").append("<a href='http://tinyurl.com/create.php?source=indexpage&url="+url+"'>Click here to get a shortened link</a>");
             });
-            jQuery.urlShortener.settings.apiKey='AIzaSyAYIYP3YOiyTp6bsIsKqHQ5oiQqcmOCKDg';
-            jQuery.urlShortener({
-    		longUrl: window.location.protocol,
-    		success: function (shortUrl) {
-        		$("body").append("<a href='"+shortUrl+"'><button class='btn btn-default'>Click here to get a shareable link</button></a>");
-    		},
-    		error: function(err)
-    		{
-        		alert(JSON.stringify(err));
-    		}
-	    });
           }
         }
 
@@ -81,5 +72,6 @@
       })();
     </script>
     <center><h3><a href="https://instagram.com/oauth/authorize/?client_id=b16c495d71ae4e079105cd632d6ed22d&redirect_uri=http://andykamath.com/instagram&response_type=token">Click here if you want a page like this for yourself!</a><br>This is also open sourced on Github <a href="http://github.com/andykamath/instagram">here</a></h3></center>
+    <center></center>
 	</body>
 </html>
