@@ -55,7 +55,7 @@
               accessToken: token,
               limit: 2000000
             }).run();
-            $("#instafeed").append("<h3>These are my most popular photos:</h3>");
+            $(",jumbotron").append("<h3>These are my most popular photos:</h3>");
             demoFeed = new Instafeed({
               get: 'user',
               userId: parseInt(user),
