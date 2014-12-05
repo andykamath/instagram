@@ -55,14 +55,7 @@
               accessToken: token,
               limit: 2000000
             }).run();
-            $(",jumbotron").append("<h3>These are my most popular photos:</h3>");
-            demoFeed = new Instafeed({
-              get: 'user',
-              userId: parseInt(user),
-              accessToken: token,
-              limit: 5,
-              sortBy: most-liked
-            }).run();
+            
             var url = "https://api.instagram.com/v1/users/"+user+"/?access_token="+token+"&callback=?";
             $.getJSON(url, function(data) {
               $(".jumbotron").append("<img class='img-circle' style='border-radius:50%' src='"+data.data.profile_picture+"' />");
